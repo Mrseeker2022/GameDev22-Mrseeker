@@ -1,2 +1,2 @@
-# GameDev22-Mrseeker
+# GameDev2022-Mrseeker
 Game Dev Coding
