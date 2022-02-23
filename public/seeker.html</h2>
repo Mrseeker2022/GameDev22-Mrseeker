@@ -17,7 +17,7 @@ document . getElementById( 'myDive1' ) . innerHTML - myIn01 +
 let myIne1 = parseFloat (document . getElementById( ' myNum01' ) . value)
 Let myAnswer = myInel * myIn01
 document . get ElementById( 'myDive1' ) . innerHTML =
-myIn01 + ' squared = '
+myIn01 + ' circle= '
 + myAnswer
 }"><br>
 div id-"myDive1">.. .</div>
