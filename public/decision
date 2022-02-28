@@ -7,8 +7,8 @@ Note: ! - Not, && - AND,
 
 <h4> Example input output code</h4>
 pre7
-Let myHour - 30
-if ( myHour < 28) {
+Let myHour - 20
+if ( myHour < 18) {
 let myGreeting - 'Good day' ;
 (/pre>
 
