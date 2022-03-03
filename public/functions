@@ -24,4 +24,4 @@ return parseInt(document. getElementById( ' myText01 . ) . value)
 <input type=text id="myText01" value="3"><br>
 <input type=button value="Function Example" onClick="{
 document. getElementById( 'myDiv01' ) . innerHTML = myExampleFunction()
-<div id-"myDiv01">. . .</div>
+<div id-"myDiv01">. . .</div>.
