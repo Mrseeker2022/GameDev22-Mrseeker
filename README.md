@@ -2,4 +2,4 @@
 Game Dev Coding
 
 
-https://github.com/Mrseeker2022/GameDev22-Mrseeker
+https://github.com/Mrseeker2022/GameDev22-Mrseeker/tree/main/public
