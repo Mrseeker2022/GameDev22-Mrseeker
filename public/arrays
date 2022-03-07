@@ -30,3 +30,5 @@ document. getElementById( ' myDive1' ) . innerHTML = mySum
 
 <div id="myDiv01">. . .</div>
 <br>
+
+Seven other  arrays for 8 out of 9:<br>
