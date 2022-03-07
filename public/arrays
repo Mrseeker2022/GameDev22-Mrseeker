@@ -25,7 +25,7 @@ myArray [2] = 'vecna'
 for (let myLoop-0;
 myLoop < myTemp; myLoop++) {
 + myArray [ myLoop] +'<br>'
-mySum += 'Loop #: ' + myLoop + ' array entry:
+myTemp += 'Loop #: ' + myLoop + ' array entry:
 document. getElementById( ' myDive1' ) . innerHTML = mySum
 
 <div id="myDiv01">. . .</div>
