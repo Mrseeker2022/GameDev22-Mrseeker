@@ -10,7 +10,7 @@
      }  // end class myanimal
 </script>
 
-     Version 0.0.1
+     Version 0.0.3
      <h2 align=center>extend class by mr seeker.html</h2>
 
     extending a pre-existing class<br>
@@ -35,4 +35,22 @@ class myguineapig extends myanimal {
  
  <h4> example extending class code</h4>
  nothing: <input type=value id="mytext01" value="useless at the moment"><br>
+ 
+ <input type=button value="example extend class set and show class animal" onClick="{
+                                                                                    
+  class my cat extends myanimal {
+                                                                                    
+     myshow(){
+       document.getelementbyid('mydiv01').innerhtml = this.myname + ' is a great pet<br>'
+     }
+  }   //end extended class my guineapig
+                                                                                    
+                                                                                    
+    mypet = new mygunieapig('butterscotch', 3)   
+    mypet.myshow()
+                                                                                    
+}">
+<div id="mydiv01">...</div>
+                                                                                    
+                                                                                    
                                                                            
