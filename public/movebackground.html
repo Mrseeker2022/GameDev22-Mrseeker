@@ -1,49 +1,42 @@
 
+<h6> Version 0.0.1 </h6>
 
 <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="https://th.bing.com/th/id/OIP.u0rPtAGksOT1QP2uErOdkAHaEK?pid=ImgDet&rs=1">
 
+<h1 align=center>t2a11 Game Template by Mrseeker</h1>
+<br><br><br><br>
+
 <script>
+
+   // global variables here
    let myGlobalX = 0
    let myClock
-</script>
 
-<input id="myButton01" type=button value="background move left" onclick="{
-  myTemp = '100px 0px'
-  myGlobalX -= 5
-  myTemp =  myGlobalX + 'px 0px'
-  document.getElementById('myBody').style.backgroundPosition =myTemp
 
-}">
-
-<input type=button value="Auto Background Left" onclick="{
-  clearInterval(myClock)
-  myClock = setInterval(function(){
-     document.getElementById('myButton01').click() 
-  }, 100)
-    
-}">
-
-<input type=button value="Image Right" onclick="{
-  document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
-}"><br><br>
-
-<img id="myImage01" style="position:relative; width:100px; height:80px; top:0px; left:0px;" src="https://i.pinimg.com/originals/da/1b/f1/da1bf1ab34ec14d0fd6e887151b8e6db.jpg">
-
-  <source  style="display:none" src="C:\Users\1081368\Documents\PAWE.mp3" type="audio/ogg">
-  <source style="display:none" src="C:\Users\1081368\Documents\PAWE.mp3" type="audio/mpeg">
-   <audio autoplay
-</audio>
-   
-
-  
-</script>  
+   // global functions here
+function myHitOther(my1,my2){
+   left1   = parseInt(document.getElementById(my1).style.left)
+   right1  = left1 + parseInt(document.getElementById(my1).style.width)
+   top1    = parseInt(document.getElementById(my1).style.top)   
+   bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+   left2   = parseInt(document.getElementById(my2).style.left)
+   right2  = left2 + parseInt(document.getElementById(my2).style.width)
+   top2    = parseInt(document.getElementById(my2).style.top)   
+   bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+   if ((right1  >=  left2  ) &&      	   
+       (bottom1 >=  top2   ) &&
+       (left1   <=  right2 ) &&
+       (top1    <=  bottom2) ){
+       return true
+   }
+}
 
 
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
        //alert('you lose')  
        document.getElementById('myImg01').style.left = '20px'
-       location = 'https://gamedev22-jesse.github.io/GameDev-JesSno/t4a07-move-background-by-Jesse.html'  // go to your next level
+       location = 'file:///C:/Users/1081368/Pictures/level%202%20D%26D.html'  // go to your next level
    }
 
 
@@ -55,3 +48,23 @@ function myCheckHit(){
 
 
 </script>
+
+<img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"  src="https://i.pinimg.com/originals/da/1b/f1/da1bf1ab34ec14d0fd6e887151b8e6db.jpg">
+<img id="myImg02" style="position:absolute; width:100px; height:80px; top:0px; left:250px;" src="https://inteng-storage.s3.amazonaws.com/images/import/2017/04/Black-Pearl-Ship.jpg">
+
+<input type=button value="Auto Background Left" onclick="{
+  clearInterval(myClock)
+  let myTemp = '100px 0px'
+  myClock = setInterval(function(){
+      myGlobalX -= 5
+      myTemp =  myGlobalX + 'px 0px'
+      document.getElementById('myBody').style.backgroundPosition = myTemp
+  }, 100)
+    
+}">
+
+
+<input type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+  myCheckHit()     // checks for all collisions
+}"><br><br>
