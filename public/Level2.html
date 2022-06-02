@@ -7,6 +7,11 @@
    let myClock
 </script>
  
+<script>
+   let myGlobalX = 0
+   let myClock
+</script>
+ 
 <input id="myButton01" type=button value="background move left" onclick="{
   myTemp = '100px 0px'
   myGlobalX -= 5
@@ -26,5 +31,6 @@
 <input type=button value="Image Right" onclick="{ 
   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px' 
 }"><br><br> 
+
 
 <img id="myImage01" style="position:relative; width:100px; height:100; top:0px; left:0px;" src="https://www.bing.com/images/blob?bcid=s-FGXCJpiz4ErQ"
