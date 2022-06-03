@@ -1,0 +1,36 @@
+
+
+<body id="myBody" style="background-repeat:repeat; background-size: 78%" background="https://th.bing.com/th/id/OIP.kEDqtMgau2mAbPmKnWwiugHaD4?pid=ImgDet&rs=1">
+ 
+<script>
+   let myGlobalX = 0
+   let myClock
+</script>
+ 
+<script>
+    myGlobalX = 0
+    myClock
+</script>
+ 
+<input id="myButton01" type=button value="background move left" onclick="{
+  myTemp = '100px 0px'
+  myGlobalX -= 5
+  myTemp =  myGlobalX + 'px 0px'
+  document.getElementById('myBody').style.backgroundPosition =myTemp
+}">
+ 
+<input type=button value="Auto Background Left" onclick="{
+  clearInterval(myClock)
+  myClock = setInterval(function(){
+     document.getElementById('myButton01').click()
+  }, 100)
+   
+}">
+
+
+<input type=button value="Image Right" onclick="{ 
+  document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px' 
+}"><br><br> 
+
+
+<img id="myImage01" style="position:relative; width:100px; height:100; top:0px; left:0px;" src="https://th.bing.com/th/id/R.2e27d588a5dac6c00a868c917f22aa31?rik=bPqb74729v61Dw&riu=http%3a%2f%2fimages2.fanpop.com%2fimage%2fphotos%2f12000000%2fGandalf-gandalf-12059933-960-404.jpg&ehk=LvABT%2b5bZeV0DsiHdQMnBYkfFn4N9JEX9Lf5yFYk30k%3d&risl=&pid=ImgRaw&r=0"/>
