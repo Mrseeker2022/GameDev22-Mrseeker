@@ -34,3 +34,10 @@
 
 
 <img id="myImage01" style="position:relative; width:100px; height:100; top:0px; left:0px;" src="https://github.com/Mrseeker2022/GameDev22-Mrseeker/blob/main/public/gandhi%20Copy%20screenshot.png?raw=true"/>
+ 
+ function myCheckHit(){
+   if ( myHitOther('myImg01','myImg02') ){
+       //alert('you lose')  
+       document.getElementById('myImg01').style.left = '20px'
+       location = 'https://mrseeker2022.github.io/GameDev22-Mrseeker/public/Lotr.html'  // go to your next level
+   }
